@@ -13,4 +13,6 @@
     <string name="TextView_dummy2">Google</string>
     <string name="TextView_dummy3">Android Inc.</string>
     <string name="TextView_dummy4">Nokia</string>
+    <string name="progress">%d/%d</string>
+    <string name="questionimage">questionImage</string>
 </resources>

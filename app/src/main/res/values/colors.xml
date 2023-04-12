@@ -10,4 +10,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primaryText">#363A43</color>
     <color name="secondaryText">#7A8089</color>
+    <color name="darkBlack">#363A43</color>
 </resources>

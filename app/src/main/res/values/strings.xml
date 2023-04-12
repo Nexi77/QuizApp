@@ -15,4 +15,6 @@
     <string name="TextView_dummy4">Nokia</string>
     <string name="progress">%d/%d</string>
     <string name="questionimage">questionImage</string>
+    <string name="finish">FINISH</string>
+    <string name="go_to">GO TO NEXT QUESTION</string>
 </resources>

@@ -6,4 +6,11 @@
     <string name="start">Start</string>
     <string name="name">Name</string>
     <string name="enter_your_username">Enter your username</string>
+    <string name="what_country_does_this_flag_belong_to">What country does this flag belong to?</string>
+    <string name="submit">SUBMIT</string>
+    <string name="progress_initial">0/10</string>
+    <string name="TextView_dummy1">Apple</string>
+    <string name="TextView_dummy2">Google</string>
+    <string name="TextView_dummy3">Android Inc.</string>
+    <string name="TextView_dummy4">Nokia</string>
 </resources>

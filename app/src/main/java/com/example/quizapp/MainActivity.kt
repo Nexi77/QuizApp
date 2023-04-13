@@ -3,6 +3,7 @@ package com.example.quizapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.inputmethod.EditorInfo
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatEditText
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Name should be at least 3 chars long", Toast.LENGTH_SHORT).show()
             } else {
                 val intent = Intent(this, QuizQuestionsActivity::class.java)
+                intent.putExtra(Constants.USER_NAME, etName.text.toString())
                 startActivity(intent)
                 finish()
             }

@@ -14,7 +14,12 @@
     <string name="TextView_dummy3">Android Inc.</string>
     <string name="TextView_dummy4">Nokia</string>
     <string name="progress">%d/%d</string>
+    <string name="resultScore">Your Score is %d out of %d</string>
     <string name="questionimage">questionImage</string>
     <string name="finish">FINISH</string>
+    <string name="finishGame">START AGAIN</string>
     <string name="go_to">GO TO NEXT QUESTION</string>
+    <string name="result">Result</string>
+    <string name="trophy">image</string>
+    <string name="congratulations">Hey, %s</string>
 </resources>

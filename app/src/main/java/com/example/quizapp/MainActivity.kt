@@ -28,10 +28,9 @@ class MainActivity : AppCompatActivity() {
             } else if (etName.text.toString().length < 3){
                 Toast.makeText(this, "Name should be at least 3 chars long", Toast.LENGTH_SHORT).show()
             } else {
-                val intent = Intent(this, QuizQuestionsActivity::class.java)
+                val intent = Intent(this, QuizSelectActivity::class.java)
                 intent.putExtra(Constants.USER_NAME, etName.text.toString())
                 startActivity(intent)
-                finish()
             }
         }
     }

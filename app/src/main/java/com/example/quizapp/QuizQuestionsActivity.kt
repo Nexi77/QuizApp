@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.*
@@ -22,16 +23,20 @@ class QuizQuestionsActivity : AppCompatActivity(), OnClickListener {
     private var questionOptionFour: TextView? = null
     private var submitBtn: Button? = null
     private var mUserName: String? = null
+    private var mCategoryId: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_questions)
         mUserName = intent.getStringExtra(Constants.USER_NAME)
+        mCategoryId = intent.getIntExtra(Constants.CATEGORY_ID, 0)
         questionOptionOne = findViewById(R.id.tv_option_one)
         questionOptionTwo = findViewById(R.id.tv_option_two)
         questionOptionThree = findViewById(R.id.tv_option_three)
         questionOptionFour = findViewById(R.id.tv_option_four)
         submitBtn = findViewById(R.id.btn_submit)
-        mQuestionsList = Constants.getQuestions()
+        mQuestionsList = Constants.getQuestions()[mCategoryId]
+        val progressBar = findViewById<ProgressBar>(R.id.progress_bar)
+        progressBar.max = mQuestionsList!!.size
         setQuestion()
         questionOptionOne?.setOnClickListener(this)
         questionOptionTwo?.setOnClickListener(this)

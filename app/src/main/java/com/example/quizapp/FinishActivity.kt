@@ -30,7 +30,9 @@ class FinishActivity : AppCompatActivity() {
             congrats.text = resources.getString(R.string.congratulations, "You can improve!")
         }
         btnFinish.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            val intent = Intent(this, QuizSelectActivity::class.java)
+            intent.putExtra(Constants.USER_NAME, username)
+            startActivity(intent)
         }
 
         tvName.text = username

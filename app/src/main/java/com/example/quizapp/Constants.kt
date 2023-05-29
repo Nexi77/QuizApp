@@ -9,16 +9,19 @@ object Constants {
 
     fun getCategories(): ArrayList<Category> {
         val categoryList = ArrayList<Category>();
-        val categoryOne = Category(0, R.drawable.ic_flag_of_argentina, "Flags");
-        val categoryTwo = Category(1, R.drawable.animal_questions, "What is this animal?");
-        categoryList.add(categoryOne);
-        categoryList.add(categoryTwo);
+        val categoryOne = Category(0, R.drawable.ic_flag_of_argentina, "Flags")
+        val categoryTwo = Category(1, R.drawable.animal_questions, "What is this animal?")
+        val categoryThree = Category(2, R.drawable.proverb_category, "Fill the gap in proverb")
+        categoryList.add(categoryOne)
+        categoryList.add(categoryTwo)
+        categoryList.add(categoryThree)
         return categoryList;
     }
     fun getQuestions(): ArrayList<ArrayList<Question>> {
         val questionsList = ArrayList<ArrayList<Question>>()
         val categoryOne = ArrayList<Question>();
         val categoryTwo = ArrayList<Question>();
+        val categoryThree = ArrayList<Question>();
         // 1
         val que1 = Question(
             1, "What country does this flag belong to?",
@@ -107,8 +110,53 @@ object Constants {
             "Lion", "Penguin",
             "Giraffe", "Tiger", 2
         )
+        val cat2q2 = Question(
+            2, "What is the largest land animal?",
+            R.drawable.animal_main,
+            "Lion", "Giraffe",
+            "Elephant", "Tiger", 3
+        )
+        val cat2q3 = Question(
+            3, "Which animal is known for its black and white stripes?",
+            R.drawable.animal_main,
+            "Zebra", "Cheetah",
+            "Kangaroo", "Gorilla", 1
+        )
+        val cat2q4 = Question(
+            4, "What is the national bird of the United States?",
+            R.drawable.animal_main,
+            "Peacock", "Bald Eagle",
+            "Ostrich", "Flamingo", 2
+        )
+        val cat2q5 = Question(
+            5, "Which animal is known for its ability to camouflage?",
+            R.drawable.animal_main,
+            "Penguin", "Hippopotamus",
+            "Koala", "Chameleon ", 4
+        )
         categoryTwo.add(cat2q1)
+        categoryTwo.add(cat2q2)
+        categoryTwo.add(cat2q3)
+        categoryTwo.add(cat2q4)
+        categoryTwo.add(cat2q5)
         questionsList.add(categoryTwo)
+
+        val cat3q1 = Question(1, "Actions speak louder than ________", R.drawable.proverb_writing,
+        "words", "music", "silence", "thoughts", 1)
+        val cat3q2 = Question(2, "The early bird catches ________", R.drawable.proverb_writing,
+            "the worm", "the wind", "the sun", "the rain", 1)
+        val cat3q3 = Question(3, "Don't put all your eggs in one ________", R.drawable.proverb_writing,
+            "pot", "bag", "bowl", "basket", 4)
+        val cat3q4 = Question(4, "When in Rome, ________", R.drawable.proverb_writing,
+            "go with the flow", "seize the day", "do as the Romans do", "follow your heart", 3)
+        val cat3q5 = Question(5, "A picture is worth a ________ words", R.drawable.proverb_writing,
+            "million", "thousand", "hundred", "dozen", 2)
+        categoryThree.add(cat3q1)
+        categoryThree.add(cat3q2)
+        categoryThree.add(cat3q3)
+        categoryThree.add(cat3q4)
+        categoryThree.add(cat3q5)
+        questionsList.add(categoryThree)
         return questionsList
     }
 }

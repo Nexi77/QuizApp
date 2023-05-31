@@ -3,6 +3,7 @@ package com.example.quizapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 
@@ -18,12 +19,12 @@ class FinishActivity : AppCompatActivity() {
         val username = intent.getStringExtra(Constants.USER_NAME)
         val totalQuestions = intent.getIntExtra(Constants.TOTAL_QUESTIONS, 0)
         val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
-        val percent = (correctAnswers / totalQuestions) * 100
-
+        val percent = ((correctAnswers.toFloat() / totalQuestions) * 100).toInt()
+        
         if(percent >= 75) {
             congrats.text = resources.getString(R.string.congratulations, "Congratulations!")
         }
-        else if (correctAnswers >= 50){
+        else if (percent >= 50){
             congrats.text = resources.getString(R.string.congratulations, "Not bad!")
         }
         else {
